@@ -1,16 +1,16 @@
 import getDomain from "@/lib/get-domain";
-import axios from "axios";
+
 import React from "react";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 async function getData() {
   const url = `${getDomain()}/api/hello`;
   console.log(url);
 
-  const res = await axios.get(url);
+  const res = await fetch(url,{cache:'no-store'});
 
-  return res.data;
+  return res.json();
 }
 
 async function BlogPage() {

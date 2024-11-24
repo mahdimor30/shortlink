@@ -1,14 +1,14 @@
-"use client";
+
 
 import React from "react";
 
-export default function Page({
+export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const slug = React.use(params).slug;
+  const slug = (await params).slug;
   console.log(slug);
 
-  return <div>My Post: {slug}</div>;
+  return <div>My Post: </div>;
 }

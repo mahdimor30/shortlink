@@ -1,19 +1,15 @@
 import getDomain from "@/lib/get-domain";
 import React from "react";
 
+
+export const dynamic = "force-dynamic";
+
 async function getData() {
-  try {
-    const res = await fetch(`${getDomain()}/api/test`, {
-      cache: "no-store",
-    });
+  const res = await fetch(`${getDomain()}/api/test`);
 
-    if (!res.ok) throw new Error("Failed to fetch data");
+  if (!res.ok) throw new Error("Failed to fetch data");
 
-    return res.json();
-  } catch (err) {
-    console.log(err);
-    return null;
-  } 
+  return res.json();
 }
 
 async function BlogPage() {

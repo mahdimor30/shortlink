@@ -1,4 +1,5 @@
 import getDomain from "@/lib/get-domain";
+import axios from "axios";
 import React from "react";
 
 export const dynamic = "force-dynamic";

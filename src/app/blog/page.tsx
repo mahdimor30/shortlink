@@ -7,7 +7,7 @@ async function getData() {
   const url = getDomain();
   console.log(url);
 
-  const res = await fetch(`${url}/api/test`);
+  const res = await fetch(`${url}/api/hello`);
 
   if (!res.ok) throw new Error("Failed to fetch data");
 

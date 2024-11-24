@@ -7,7 +7,7 @@ async function getData() {
   const url = `${getDomain()}/api/hello`;
   console.log(url);
 
-  const res = await fetch(`${url}/api/hello`);
+  const res = await fetch(url);
 
   console.log(res);
   

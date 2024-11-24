@@ -2,13 +2,18 @@ import getDomain from "@/lib/get-domain";
 import React from "react";
 
 async function getData() {
-  const res = await fetch(`${getDomain()}/api/test`, {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch(`${getDomain()}/api/test`, {
+      cache: "no-store",
+    });
 
-  if (!res.ok) throw new Error("Failed to fetch data");
+    if (!res.ok) throw new Error("Failed to fetch data");
 
-  return res.json();
+    return res.json();
+  } catch (err) {
+    console.log(err);
+    return null;
+  } 
 }
 
 async function BlogPage() {

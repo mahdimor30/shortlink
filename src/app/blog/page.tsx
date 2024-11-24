@@ -7,12 +7,9 @@ async function getData() {
   const url = `${getDomain()}/api/hello`;
   console.log(url);
 
-  const res = await fetch(url);
+  const res = await axios.get(url);
 
-  console.log(res);
-  
-
-  return res.json();
+  return res.data;
 }
 
 async function BlogPage() {

@@ -1,10 +1,10 @@
 import getDomain from "@/lib/get-domain";
 import React from "react";
 
-export const dynamic = "force-dynamic";
-
 async function getData() {
-  const res = await fetch(`${getDomain()}/api/hello`);
+  const res = await fetch(`${getDomain()}/api/test`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) throw new Error("Failed to fetch data");
 

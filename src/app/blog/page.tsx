@@ -4,12 +4,13 @@ import React from "react";
 export const dynamic = "force-dynamic";
 
 async function getData() {
-  const url = getDomain();
+  const url = `${getDomain()}/api/hello`;
   console.log(url);
 
   const res = await fetch(`${url}/api/hello`);
 
-  if (!res.ok) throw new Error("Failed to fetch data");
+  console.log(res);
+  
 
   return res.json();
 }

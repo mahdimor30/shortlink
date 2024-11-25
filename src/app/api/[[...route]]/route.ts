@@ -2,7 +2,7 @@ import api from '@/server'
 // import api from '@/server/openapi'
 import { handle } from 'hono/vercel'
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 
 

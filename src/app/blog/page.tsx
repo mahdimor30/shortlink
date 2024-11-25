@@ -2,13 +2,13 @@ import getDomain from "@/lib/get-domain";
 
 import React from "react";
 
-// export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 async function getData() {
   const url = `${getDomain()}/api/hello`;
   console.log(url);
 
-  const res = await fetch(url,{cache:'no-store'});
+  const res = await fetch(url);
 
   return res.json();
 }
